@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Ян Захаров](https://up.htmlacademy.ru/adaptive/26/user/2087061).
-* Наставник: `Руслан Бреев`.
+* Наставник: [Руслан Бреев](https://htmlacademy.ru/profile/blckwltz).
 
 ---
 

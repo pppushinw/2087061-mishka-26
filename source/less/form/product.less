@@ -1,0 +1,144 @@
+.product {
+  padding: 0 30px;
+}
+
+.product__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product__form-options p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: #444444;
+  margin-bottom: 30px;
+  margin-top: 17px;
+}
+
+.product__form-options .form__filter {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  .filter-form__input:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  .filter-form__input span {
+    font-weight: @bold;
+    font-size: 17px;
+    line-height: 18px;
+  }
+}
+
+.form__filter legend {
+  font-weight: @bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: @lg;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.product-form__user {
+  .form__filter {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form__filter:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .filter-form__title {
+    margin-bottom: 4px;
+  }
+
+  .filter-form__input input {
+    border: none;
+    border-bottom: 2px solid #000;
+    width: 260px;
+    height: 52px;
+    outline: none;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  .filter-form__input input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .filter-form__input textarea {
+    resize: none;
+    border: 2px solid #000;
+    width: 260px;
+    height: 142px;
+    outline: none;
+    padding: 17px 0 0 17px;
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  .filter-form__input textarea::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .product__input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product__input label {
+    font-weight: @bold;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  .product__input input {
+    border: none;
+    border-bottom: 2px solid #000;
+    width: 260px;
+    height: 52px;
+    outline: none;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  .product__input input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  .product__input:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
+
+.product-form__user span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.product__form button {
+  border: 2px solid #444444;
+  font-weight: @bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: #444444;
+  padding: 18px 37px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 55px;
+  width: 260px;
+}

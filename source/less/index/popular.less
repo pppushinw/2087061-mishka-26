@@ -6,11 +6,11 @@
   justify-content: space-between;
 }
 
-.popular__title {
+.popular__title .block__title {
   margin-bottom: 3px;
 }
 
-.popular span {
+.popular__title span {
   font-weight: @bold;
   font-size: 17px;
   line-height: 20px;
@@ -18,7 +18,20 @@
   color: @lg;
 }
 
-.popular p {
+.popular__desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular__desc .popular__price {
+  order: 2;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popular__desc p {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
@@ -43,7 +56,7 @@
   color: #444444;
 }
 
-.popular span.price {
+.popular__price span.price {
   font-weight: @bold;
   font-size: 17px;
   line-height: 24px;
@@ -52,7 +65,7 @@
   margin: 25px 0;
 }
 
-.popular button {
+.popular__price button {
   background-color: #ffffff;
   border: 2px solid #444444;
   color: #444444;
@@ -62,4 +75,25 @@
   line-height: 20px;
   text-transform: uppercase;
   align-self: center;
+}
+
+@media (min-width: @tablet-width) {
+  .popular {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 0 0;
+  }
+
+  .popular__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 655px;
+    width: 100%;
+  }
+
+  .popular__title span {
+    max-width: 100px;
+    text-align: center;
+  }
 }

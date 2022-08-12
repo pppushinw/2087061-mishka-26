@@ -37,3 +37,33 @@
   margin-bottom: 55px;
   width: 260px;
 }
+
+.product__input {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__input label {
+  font-weight: @bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.product__input input {
+  border: none;
+  border-bottom: 2px solid #000000;
+  width: 260px;
+  height: 52px;
+  outline: none;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.product__input input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.product__input:not(:last-child) {
+  margin-bottom: 22px;
+}

@@ -22,13 +22,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-}
 
-.info__item:not(:last-child) {
-  margin-bottom: 32px;
-}
-
-.info__item {
   &--flower::before {
     content: url("../img/index/icon-1.svg");
     margin-bottom: 16px;
@@ -70,4 +64,8 @@
     width: 33px;
     height: 32px;
   }
+}
+
+.info__item:not(:last-child) {
+  margin-bottom: 32px;
 }

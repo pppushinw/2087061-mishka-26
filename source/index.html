@@ -76,7 +76,7 @@
 
       <main>
           <div class="main">
-              <h1 class="main__title">Милые штуки <br> ручной <br>  работы для дома</h1>
+              <h1 class="main__title">Милые штуки ручной <br> работы для дома</h1>
               <!-- /.main__title -->
               <ul class="main__list">
                 <li class="main__item">
@@ -85,7 +85,7 @@
                   </a>
                 </li>
                 <!-- /.main-item -->
-              <li class="main__item">
+              <li class="main__item main__item--dark">
                 <a href="#" class="main__link link-main main__link--toy">
                     Детские <br> игрушки
                 </a>
@@ -96,28 +96,36 @@
           </div>
           <!-- /.main -->
           <div class="popular">
-              <h2 class="popular__title block__title">Вязаные корзинки</h2>
-              <!-- /.popular__title -->
+            <div class="popular__title">
+              <h2 class="block__title">Вязаные корзинки</h2>
               <span>товар недели</span>
+            </div>
+            <!-- /.popular__title -->
+            <div class="popular__desc">
               <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
               <table class="popular__table">
-                  <tr>
-                    <td>Цвет:</td>
-                    <td>тиффани/серый</td>
+                <tr>
+                  <td>Цвет:</td>
+                  <td>тиффани/серый</td>
+                </tr>
+                <tr>
+                  <td>Диаметр:</td>
+                <td>25 см</td>
                   </tr>
                   <tr>
-                    <td>Диаметр:</td>
-                    <td>25 см</td>
-                  </tr>
-                  <tr>
-                    <td>Высота:</td>
-                    <td>15 см</td>
+                <td>Высота:</td>
+                  <td>15 см</td>
                   </tr>
               </table>
               <!-- /.popular__table -->
+              <div class="popular__price">
+                <span class="price">Цена: 990 руб.</span>
+                <button>заказать</button>
+              </div>
+              <!-- /.popular__price -->
               <img width="260" height="315" src="img/index/triple-set-mobile.png" alt="Товар недели">
-              <span class="price">Цена: 990 руб.</span>
-              <button>заказать</button>
+            </div>
+            <!-- /.popular__desc -->
           </div>
           <!-- /.popular -->
           <div class="info">
@@ -246,5 +254,23 @@
       </footer>
   </div>
   <!-- /.container -->
+
+
+  <div class="modal__container">
+    <div class="modal">
+      <div class="modal__title block__title">Добавить <br> в корзину</div>
+      <!-- /.modal__title -->
+      <p>Выберите размер:</p>
+      <div class="modal__size">
+        <button class="modal__size--active">S</button>
+        <button>M</button>
+        <button>L</button>
+      </div>
+      <!-- /.modal__size -->
+      <button class="modal__button">Добавить</button>
+    </div>
+    <!-- /.modal -->
+  </div>
+  <!-- /.modal__container -->
   </body>
 </html>

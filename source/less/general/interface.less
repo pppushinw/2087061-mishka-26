@@ -25,7 +25,7 @@ body {
 }
 
 .container {
-  max-width: 320px;
+  // max-width: 320px;
   margin: 0 auto;
 }
 
@@ -48,23 +48,8 @@ button {
   border: 2px solid #444444;
 }
 
-.main__title {
-  font-weight: @bold;
-  font-size: 27px;
-  line-height: 30px;
-  color: #000000;
-}
-
-.block__title {
-  font-weight: @bold;
-  font-size: 25px;
-  line-height: 30px;
-  color: #000000;
-}
-
-.link-catalog__card-name {
-  font-weight: @bold;
-  font-size: 17px;
-  line-height: 24px;
-  color: #000000;
+@media (min-width: @tablet-width) {
+  .container {
+    padding: 0 50px;
+  }
 }

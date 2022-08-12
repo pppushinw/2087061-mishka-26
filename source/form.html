@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Форма</title>
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-</head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
 <body>
     <div class="container">
         <header>
             <div class="header__logo">
-                <h1 class="visually-hidden">Логотип компании</h1>
+                <span class="visually-hidden">Логотип компании</span>
                 <!-- /.visually-hidden -->
                 <a href="index.html">
                     <svg width="86" height="35" viewBox="0 0 86 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -72,8 +75,8 @@
 
         <main>
             <div class="main">
-                <h2 class="main-title">Вязание на заказ</h2>
-                <!-- /.main-title -->
+                <h1 class="main__title main__title--background-grey">Вязание на заказ</h1>
+                <!-- /.main__title -->
             </div>
             <!-- /.main -->
             <div class="product">
@@ -81,8 +84,8 @@
                     <div class="product__form-options product__form-type">
                         <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
                         <fieldset class="form__filter filter-form">
-                            <legend class="visually-hidden">тип</legend>
-                            <label for="filter-form__input">
+                            <legend>тип</legend>
+                            <label class="filter-form__input">
                                 <input type="radio" name="product-type" value="interior" checked>
                                 <span>Аксессуар для интерьера</span>
                             </label>
@@ -96,9 +99,9 @@
                     </div>
                     <!-- /.product__form-type -->
                     <div class="product__form-options product__form-color">
-                        <fieldset>
-                            <legend class="visually-hidden">Цвет</legend>
-                            <label for="filter-form__input">
+                        <fieldset class="form__filter filter-form">
+                            <legend>Цвет</legend>
+                            <label class="filter-form__input">
                                 <input type="checkbox" name="product-color" value="white" checked>
                                 <span>Белый</span>
                             </label>
@@ -131,38 +134,46 @@
                         </fieldset>
                     </div>
                     <!-- /.product__form-type -->
-                    <div class="product__form-user">
+                    <div class="product__form-user product-form__user">
+                      <fieldset class="form__filter filter-form">
+                        <legend>ФИО</legend>
                         <p class="product__input">
-                            <label for="name">Имя:</label>
-                            <input type="text" placeholder="Введите ваше имя*" name="name" id="name">
+                          <label for="name">Имя:</label>
+                          <input type="text" placeholder="Введите ваше имя*" name="name" id="name">
                         </p>
                         <!-- /.product__input -->
                         <p class="product__input">
-                            <label for="last-name">Фамилия:</label>
-                            <input type="text" placeholder="Укажите фамилию*" name="last-name" id="last-name">
+                          <label for="last-name">Фамилия:</label>
+                          <input type="text" placeholder="Укажите фамилию*" name="last-name" id="last-name">
                         </p>
                         <!-- /.product__input -->
                         <p class="product__input">
-                            <label for="patronymic">Отчество:</label>
-                            <input type="text" placeholder="Отчество, если желаете" name="patronymic" id="patronymic">
+                          <label for="patronymic">Отчество:</label>
+                          <input type="text" placeholder="Отчество, если желаете" name="patronymic" id="patronymic">
                         </p>
                         <!-- /.product__input -->
-                        <p class="product__input">
-                            <label for="phone">тел</label>
-                            <input type="text" placeholder="+7 ХХХ ХХХ ХХ ХХ*" name="phone" id="phone">
-                        </p>
-                        <!-- /.product__input -->
-                        <p class="product__input">
-                            <label for="email">E-mail</label>
-                            <input type="text" placeholder="Ваш Email*" name="email" id="email">
-                        </p>
-                        <!-- /.product__input -->
-                        <p class="product__input">
-                            <label for="info">Доп</label>
-                            <input type="text" placeholder="Опишите все ваши пожелания к заказу" name="info" id="info">
-                        </p>
-                        <!-- /.product__input -->
-                        <span>*Поля обязательны для заполнения</span>
+                      </fieldset>
+
+                      <fieldset class="form__filter filter-form">
+                        <legend class="filter-form__title">тел</legend>
+                        <label class="filter-form__input">
+                          <input type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" name="phone" id="phone">
+                        </label>
+                      </fieldset>
+
+                      <fieldset class="form__filter filter-form">
+                        <legend class="filter-form__title">E-mail</legend>
+                        <label class="filter-form__input">
+                          <input type="email" placeholder="Ваш Email*" name="email" id="email">
+                        </label>
+                      </fieldset>
+
+                      <fieldset class="form__filter filter-form">
+                        <legend class="filter-form__title">Доп</legend>
+                        <label class="filter-form__input">
+                          <textarea type="text" placeholder="Опишите все ваши пожелания к заказу" name="info" id="info"></textarea>
+                      </fieldset>
+                      <span>*Поля обязательны для заполнения</span>
                     </div>
                     <!-- /.product__form-user -->
                     <button type="submit">отправить заказ</button>
@@ -200,7 +211,7 @@
                     <!-- /.footer__item -->
                 </ul>
                 <!-- /.social__list -->
-                <div class="copyright">
+                <div class="footer__copyright">
                     <b>Разработано</b>
                     <img width="27" height="34" src="img/index/htmlacademy.svg" alt="Логотип компании которая разработала сайт магазина">
                 </div>
@@ -210,5 +221,21 @@
         </footer>
     </div>
     <!-- /.container -->
+    <div class="modal__container">
+      <div class="modal">
+        <div class="modal__title block__title">Добавить <br> в корзину</div>
+        <!-- /.modal__title -->
+        <p>Выберите размер:</p>
+        <div class="modal__size">
+          <button class="modal__size--active">S</button>
+          <button>M</button>
+          <button>L</button>
+        </div>
+        <!-- /.modal__size -->
+        <button class="modal__button">Добавить</button>
+      </div>
+      <!-- /.modal -->
+    </div>
+    <!-- /.modal__container -->
 </body>
 </html>

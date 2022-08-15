@@ -67,3 +67,57 @@
 .product__input:not(:last-child) {
   margin-bottom: 22px;
 }
+
+.product__button {
+  margin-top: 17px;
+}
+
+.product__button span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .product__form-options .form__filter {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .product__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 501px;
+    width: 100%;
+  }
+
+  .product__input label {
+    margin-right: 24px;
+  }
+
+  .product__input input {
+    width: 100%;
+  }
+
+  .product__form-options p {
+    margin-bottom: 63px;
+  }
+
+  .product__button {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 53px;
+  }
+
+  .product__button button,
+  .product__button span {
+    margin: 0;
+  }
+}

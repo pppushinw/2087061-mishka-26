@@ -1,10 +1,30 @@
-.filter-form legend {
+.filter-form__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 262px;
+}
+
+.filter-form__title hr {
+  height: 1px;
+  width: 200px;
+  border: none;
+  background-color: @lg;
+}
+
+.filter-form__title span {
   font-weight: @bold;
   font-size: 17px;
   line-height: 16px;
   color: @lg;
   text-transform: uppercase;
-  margin-bottom: 30px;
+}
+
+.filter-form__list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .filter-form__input span {
@@ -15,10 +35,6 @@
 
 .filter-form__input:not(:last-child) {
   margin-bottom: 23px;
-}
-
-.filter-form__title {
-  margin-bottom: 4px;
 }
 
 .filter-form__input input[type="text"],
@@ -53,4 +69,36 @@ input[type="email"] {
 
 .filter-form__input textarea::placeholder {
   color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .filter-form__title hr {
+    display: none;
+  }
+
+  .filter-form__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter-form__input {
+    flex-basis: 50%;
+  }
+
+  .filter-form__title {
+    max-width: 107px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .filter-form__input input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 501px;
+  }
+
+  .filter-form__input textarea {
+    width: 501px;
+  }
 }

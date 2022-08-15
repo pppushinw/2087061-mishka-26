@@ -40,3 +40,38 @@
   background-color: #ffffff;
   border: none;
 }
+
+.link-catalog__img-tablet {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .link-catalog__img-mobile {
+    display: none;
+  }
+
+  .link-catalog__img-tablet {
+    display: block;
+  }
+
+  .link-catalog {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .link-catalog__card {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 39px 25px 34px;
+    width: 334px;
+    height: 334px;
+  }
+
+  .link-catalog__card-price {
+    margin-top: 0;
+  }
+
+}

@@ -22,6 +22,10 @@
   display: none;
 }
 
+.text-production__video-desktop {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .text-production__video-mobile {
     display: none;
@@ -42,5 +46,29 @@
 
   .text-production__title img {
     margin-right: 33px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .text-production__video-tablet {
+    display: none;
+  }
+
+  .text-production__video-desktop {
+    display: block;
+  }
+
+  .text-production {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-production__info {
+    padding: 47px 36px 60px 79px;
+  }
+
+  .text-production__title {
+    margin-left: 0;
   }
 }

@@ -102,3 +102,28 @@ input[type="email"] {
     width: 501px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .filter-form__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-form__title {
+    width: 107px;
+  }
+
+  .filter-form__input {
+    flex-basis: 33%;
+  }
+
+  .filter-form__input input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 698px;
+  }
+
+  .filter-form__input textarea {
+    width: 698px;
+  }
+}

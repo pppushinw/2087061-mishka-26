@@ -1,0 +1,51 @@
+.contact-map {
+  margin-left: -30px;
+}
+
+.contact-map img:last-child {
+  position: absolute;
+  top: -60px;
+  left: 50px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.contact-map__mobile {
+  position: relative;
+}
+
+.contact-map__tablet {
+  display: none;
+}
+
+.contact-map__desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .contact-map {
+    margin: 0;
+  }
+
+  .contact-map__mobile {
+    display: none;
+  }
+
+  .contact-map__tablet {
+    display: block;
+    margin-left: -50px;
+    position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact-map__tablet {
+    display: none;
+  }
+
+  .contact-map__desktop {
+    display: block;
+    position: relative;
+  }
+}

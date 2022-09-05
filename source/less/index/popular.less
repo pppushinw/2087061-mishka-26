@@ -1,0 +1,79 @@
+.popular {
+  padding: 31px 30px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.popular__title .block__title {
+  margin-bottom: 3px;
+
+}
+
+.popular__title span {
+  font-weight: @bold;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @lg;
+}
+
+.popular__table {
+  margin: 28px 0;
+  width: 260px;
+  border-collapse: collapse;
+}
+
+.popular__table tr {
+  border-bottom: 1px solid #ececec;
+}
+
+.popular__table tr td {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 32px;
+  color: #444444;
+}
+
+.popular__price span.price {
+  font-weight: @bold;
+  font-size: 17px;
+  line-height: 24px;
+  color: #444444;
+  align-self: center;
+  margin: 25px 0;
+}
+
+.popular__price button {
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  color: #444444;
+  padding: 16px 80px;
+  font-weight: @bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+@media (min-width: @tablet-width) {
+  .popular {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .popular__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 655px;
+    width: 100%;
+  }
+
+  .popular__title span {
+    max-width: 100px;
+    text-align: center;
+  }
+}
+

@@ -40,3 +40,69 @@
   background-color: #ffffff;
   border: none;
 }
+
+.link-catalog__img-tablet {
+  display: none;
+}
+
+.link-catalog__img-desktop {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .link-catalog__img-mobile {
+    display: none;
+  }
+
+  .link-catalog__img-tablet {
+    display: block;
+  }
+
+  .link-catalog {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .link-catalog__card {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 39px 25px 34px;
+    width: 334px;
+    height: 334px;
+  }
+
+  .link-catalog__card-name {
+    font-size: 20px;
+  }
+
+  .link-catalog__card span {
+    font-size: 15px;
+  }
+
+  .link-catalog__card-price {
+    margin-top: 0;
+  }
+
+  .link-catalog__card-price b {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .link-catalog__card {
+    width: 316px;
+    height: 197px;
+    margin-top: -1px;
+  }
+
+  .link-catalog__img-tablet {
+    display: none;
+  }
+
+  .link-catalog__img-desktop {
+    display: block;
+  }
+}

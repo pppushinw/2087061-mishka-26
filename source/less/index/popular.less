@@ -6,11 +6,6 @@
   justify-content: space-between;
 }
 
-.popular__title .block__title {
-  margin-bottom: 3px;
-
-}
-
 .popular__title span {
   font-weight: @bold;
   font-size: 17px;
@@ -61,6 +56,9 @@
   .popular {
     display: flex;
     flex-direction: column;
+    padding: 40px 0 52px 0;
+    margin-top: 54px;
+    position: relative;
   }
 
   .popular__title {
@@ -69,11 +67,43 @@
     align-items: center;
     max-width: 655px;
     width: 100%;
+    margin-bottom: 40px;
   }
 
   .popular__title span {
     max-width: 100px;
     text-align: center;
+    line-height: 17px;
+  }
+
+  .popular__table {
+    margin: 48px 0 50px;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .popular {
+    padding: 45px 32px 96px;
+  }
+
+  .popular__title {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    max-width: 100%;
+  }
+
+  .popular__title h2 {
+    font-size: 53px;
+    z-index: 2;
+  }
+
+  .popular__title span {
+    margin-right: 43px;
+  }
+
+  .popular__table {
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+}

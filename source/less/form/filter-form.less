@@ -1,8 +1,30 @@
+.filter-form__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 262px;
+}
+
+.filter-form__title hr {
+  height: 1px;
+  width: 200px;
+  border: none;
+  background-color: @lg;
+}
+
+.filter-form__title span {
   font-weight: @bold;
   font-size: 17px;
   line-height: 16px;
   color: @lg;
   text-transform: uppercase;
+}
+
+.filter-form__list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .filter-form__input span {
@@ -48,4 +70,69 @@ input[type="email"] {
 
 .filter-form__input textarea::placeholder {
   color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .filter-form__title hr {
+    display: none;
+  }
+
+  .filter-form__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter-form__input {
+    flex-basis: 50%;
+  }
+
+  .filter-form__title {
+    max-width: 107px;
+    width: 100%;
+    margin-bottom: 0;
+    margin-right: 62px;
+  }
+
+  .filter-form__input input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 501px;
+  }
+
+  .filter-form__input textarea {
+    width: 501px;
+  }
+
+  // .filter-form--grey {
+  //   background-color: #e5e5e5;
+  //   max-width: 100%;
+  //   width: 100%;
+  //   padding: 50px;
+  // }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-form__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filter-form__title {
+    width: 107px;
+  }
+
+  .filter-form__input {
+    flex-basis: 33%;
+  }
+
+  .filter-form__input input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 698px;
+  }
+
+  .filter-form__input textarea {
+    width: 698px;
+  }
 }

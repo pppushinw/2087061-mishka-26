@@ -8,6 +8,10 @@
   align-items: flex-start;
 }
 
+.product__form-options {
+  margin-bottom: 30px;
+}
+
 .product__form-options p {
   font-weight: 400;
   font-size: 13px;
@@ -22,7 +26,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 30px;
 }
 
 .product__form button {
@@ -66,4 +69,87 @@
 
 .product__input:not(:last-child) {
   margin-bottom: 22px;
+}
+
+.product__button {
+  margin-top: 17px;
+}
+
+.product__button span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #444444;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .product {
+    padding: 0;
+  }
+
+  .product__form-options {
+    margin-bottom: 50px;
+  }
+
+  .product__form-options .form__filter {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .product__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 501px;
+    width: 100%;
+  }
+
+  .product__input label {
+    margin-right: 24px;
+  }
+
+  .product__input input {
+    width: 100%;
+  }
+
+  .product__form-options p {
+    margin-bottom: 63px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .product__button {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 53px;
+    margin-bottom: 50px;
+  }
+
+  .product__button button,
+  .product__button span {
+    margin: 0;
+  }
+
+  .product__form-type .form__filter .filter-form__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product__form-color .filter-form__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product__input {
+    width: 698px;
+    max-width: 698px;
+  }
 }

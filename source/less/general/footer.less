@@ -7,6 +7,10 @@
   padding: 25px 30px;
 }
 
+.footer__logo {
+  display: none;
+}
+
 .footer__list {
   margin: 0;
   padding: 0;
@@ -41,4 +45,31 @@
   font-size: 19px;
   line-height: 18px;
   margin-right: 27px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 -50px;
+    padding: 51px 50px 58px;
+  }
+
+  .footer__logo {
+    display: block;
+  }
+
+  .footer__list {
+    margin-bottom: 0;
+  }
+
+  .footer hr {
+    display: none;
+  }
+
+  .footer__copyright {
+    margin-top: 0;
+  }
 }

@@ -16,6 +16,12 @@
   margin-right: 25px;
 }
 
+.production__title h3 {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
 .production__text {
   border: 1px solid #ececec;
 }
@@ -38,3 +44,44 @@
   display: block;
 }
 
+@media (min-width: @tablet-width) {
+  .production {
+    padding: 0;
+    margin-bottom: 64px;
+  }
+
+  .production__title {
+    display: none;
+  }
+
+  .production__text {
+    border: none;
+  }
+
+  .production__text p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .production__text button {
+    max-width: 584px;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    margin-bottom: 105px;
+  }
+
+  .production__text p {
+    margin-left: 0;
+    margin-top: 27px;
+  }
+
+  .production__text button {
+    margin-left: 0;
+    max-width: 232px;
+    padding: 16px 0;
+  }
+}

@@ -16,7 +16,12 @@
 .main__title--background-grey {
   background-color: #f1f1f1;
   background-image: none;
-
+  padding: 101px 0 75px 0;
+  font-weight: @bold;
+  font-size: 27px;
+  line-height: 30px;
+  color: #000000;
+  text-align: center;
 }
 
 .main__list {
@@ -75,7 +80,21 @@
     background-size: cover;
 
     padding: 150px 0 372px;
+    margin: 0 -50px;
+    font-size: 43px;
+    line-height: 50px;
+  }
 
+  .main__title--background-grey {
+    background-color: #f1f1f1;
+    background-image: none;
+    padding: 101px 0 75px 0;
+    font-weight: @bold;
+    font-size: 27px;
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+    margin: 0 -50px;
   }
 
   .main__list {
@@ -83,10 +102,35 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: -115px;
   }
 
   .main__item {
     flex-basis: 50%;
   }
+
+  .main__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
+@media (min-width: @desktop-width) {
+  .main__title {
+    background-image: url("../img/index/hero-desktop-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    font-size: 53px;
+    line-height: 57px;
+    padding: 150px 0 433px;
+  }
+
+  .main__title--background-grey {
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 50px;
+    padding: 101px 0 95px;
+  }
+}

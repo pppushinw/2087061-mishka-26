@@ -1,4 +1,6 @@
 .header-menu--mobile {
+  display: block;
+
   .header-menu {
     position: relative;
   }
@@ -21,6 +23,11 @@
     padding: 27px 0 27px 76px;
     align-self: center;
     position: relative;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .header-menu__item:first-child {
+    border-top: 1px solid #e5e5e5;
   }
 
   .header-menu__item svg {
@@ -39,7 +46,7 @@
   .header-menu__dropdown {
     display: none;
     position: absolute;
-    top: 0;
+    top: 79px;
     left: 0;
     background-color: #ffffff;
     min-width: 320px;
@@ -50,6 +57,61 @@
   .header-menu__dropdown--active {
     display: block;
   }
+
+  .header-menu__toggle {
+    position: absolute;
+    top: 32px;
+    right: 31px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .header-menu__toggle span {
+    background-color: #231f20;
+    height: 2px;
+    min-width: 20px;
+  }
+
+  .header-menu__toggle span:nth-child(2) {
+    margin-bottom: 4px;
+    margin-top: 4px;
+  }
+}
+
+.header-menu__list-visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: -5px;
+}
+
+.header-menu__list-visible .header-menu__item {
+  max-width: 320px;
+  width: 100%;
+  padding: 27px 0 27px 76px;
+  align-self: center;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header-menu__list-visible .header-menu__item:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.header-menu__list-visible .header-menu__item svg {
+  position: absolute;
+  left: 35px;
+}
+
+.header-menu__item a {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #000000;
 }
 
 .header-menu {
@@ -66,7 +128,20 @@
   }
 }
 
-@media (min-width: 768px) {
+.header-menu__toggle--close span:nth-child(1) {
+  transform: rotate(45deg);
+  margin-bottom: -1px;
+}
+
+.header-menu__toggle--close span:nth-child(2) {
+  display: none;
+}
+
+.header-menu__toggle--close span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+@media (min-width: @tablet-width) {
   .header-menu {
     &--mobile {
       display: none;
@@ -146,11 +221,16 @@
       }
     }
   }
+
+  .header-menu--visible {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .header-menu--desktop {
     display: block;
+    z-index: 2;
 
     .header-menu__list {
       display: flex;

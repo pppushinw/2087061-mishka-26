@@ -28,7 +28,7 @@
   outline: 2px solid #ececec;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .reviews-user {
     display: flex;
     align-items: center;
@@ -39,6 +39,14 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
+  }
+
+  .reviews-user__info b {
+    font-size: 18px;
+  }
+
+  .reviews-user__info span {
+    font-size: 18px;
   }
 
   .reviews-user__arrow {

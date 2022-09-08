@@ -1,6 +1,5 @@
 .contact {
   padding: 38px 30px;
-  border-top: 1px solid #ececec;
 }
 
 .contact__title {
@@ -37,6 +36,9 @@
   border-bottom: 1px solid #62d1ba;
 }
 
+.contact__info .contact__link {
+  display: none;
+}
 
 .contact__link {
   background-color: #ffffff;
@@ -50,4 +52,95 @@
   font-size: 17px;
   line-height: 20px;
   margin-top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .contact {
+    padding: 22px 0;
+    margin-top: 46px;
+  }
+
+  .contact__table {
+    margin-bottom: 49px;
+    width: 100%;
+  }
+
+  .contact__table tbody {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact__table tr {
+    width: 100%;
+  }
+
+  .contact__table tr td {
+    font-size: 17px;
+  }
+
+  .contact__link {
+    padding: 14px 26px;
+    width: 230px;
+    margin: 55px auto 57px;
+  }
+
+  .contact__title::after {
+    content: url("../img/index/flag.svg");
+  }
+
+  .contact__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contact {
+    padding: 70px 0 0 175px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 105px;
+  }
+
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact__title {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+  }
+
+  .contact__title h2 {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .contact__title::after {
+    position: absolute;
+    left: -40%;
+  }
+
+  .contact__table tbody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact__info .contact__link {
+    display: block;
+  }
+
+  .contact__link {
+    display: none;
+  }
 }

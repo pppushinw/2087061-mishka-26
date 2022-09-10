@@ -20,7 +20,8 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+span {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -51,5 +52,13 @@ button {
 @media (min-width: @tablet-width) {
   .container {
     padding: 0 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    padding: 0 50px;
+    max-width: 1150px;
+    margin: 0 auto;
   }
 }

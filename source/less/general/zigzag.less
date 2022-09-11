@@ -1,23 +1,22 @@
 .zigzag-fill {
   display: none;
+
 }
 
 .zigzag-line {
   display: none;
+
 }
 
 @media (min-width: @tablet-width) {
   .zigzag-fill {
     display: block;
-    border: 0;
-    position: relative;
-    height: 24px;
-    margin: -24px -50px 0;
+
   }
 
   .zigzag-fill::after {
     position: absolute;
-    content: url("../img/index/zigzag-fill-desktop.svg");
+
     top: 0;
     left: 0;
     width: 100%;
@@ -26,17 +25,16 @@
 
   .zigzag-line {
     display: block;
-    border: 0;
-    position: relative;
-    height: 24px;
+
   }
 
   .zigzag-line::after {
     position: absolute;
-    content: url("../img/index/zigzag-line-desktop.svg");
+
     top: 0;
     left: 0;
     width: 100%;
     height: 24px;
   }
 }
+

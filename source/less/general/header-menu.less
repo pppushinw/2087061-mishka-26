@@ -114,6 +114,39 @@
   color: #000000;
 }
 
+.header-menu__item button svg {
+  opacity: 0.2;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
+.header-menu__item {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.header-menu__item:hover button svg {
+  fill: @lg;
+  opacity: 1;
+}
+
+.header-menu__item:active button svg {
+  opacity: 0.3;
+}
+
+.header-menu__item button span {
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
+.header-menu__item:hover button span {
+  opacity: 0.6;
+}
+
+.header-menu__item:active button span {
+  opacity: 0.3;
+}
+
 .header-menu {
   &--tablet {
     display: none;
@@ -126,6 +159,19 @@
   &--bottom {
     display: none;
   }
+}
+
+.header-menu__link {
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
+.header-menu__link:hover {
+  opacity: 0.6;
+}
+
+.header-menu__link:active {
+  opacity: 0.3;
 }
 
 .header-menu__toggle--close span:nth-child(1) {

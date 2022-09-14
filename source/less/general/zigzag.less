@@ -1,22 +1,28 @@
 .zigzag-fill {
   display: none;
-
+  border: 0;
+  position: relative;
+  height: 24px;
+  margin: -23px -50px 0;
 }
 
 .zigzag-line {
   display: none;
-
+  border: 0;
+  position: relative;
+  height: 24px;
+  margin-right: -50px;
+  margin-left: -50px;
 }
 
 @media (min-width: @tablet-width) {
   .zigzag-fill {
     display: block;
-
   }
 
   .zigzag-fill::after {
     position: absolute;
-
+    content: url("../img/index/zigzag-fill-tablet.svg");
     top: 0;
     left: 0;
     width: 100%;
@@ -25,16 +31,29 @@
 
   .zigzag-line {
     display: block;
-
   }
 
   .zigzag-line::after {
     position: absolute;
-
+    content: url("../img/index/zigzag-line-tablet.svg");
     top: 0;
     left: 0;
     width: 100%;
     height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .zigzag-fill::after {
+    content: url("../img/index/zigzag-fill-desktop.svg");
+  }
+
+  .zigzag-line {
+    margin: 0;
+  }
+
+  .zigzag-line::after {
+    content: url("../img/index/zigzag-line-desktop.svg");
   }
 }
 

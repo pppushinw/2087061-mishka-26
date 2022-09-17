@@ -7,6 +7,8 @@
   padding: 25px 30px;
   border: 1px solid #ececec;
   margin-top: -6px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
 }
 
 .link-catalog__card-name {
@@ -15,6 +17,8 @@
   font-size: 17px;
   line-height: 24px;
   color: #000000;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
 }
 
 .link-catalog__card span {
@@ -51,6 +55,37 @@
 
 .link-catalog__img-desktop {
   display: none;
+}
+
+.link-catalog:hover .link-catalog__card {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link-catalog:active .link-catalog__card {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.link-catalog:hover .link-catalog__card-name {
+  opacity: 0.6;
+}
+
+.link-catalog:active .link-catalog__card-name {
+  opacity: 0.3;
+}
+
+.link-catalog__card-price svg {
+  opacity: 0.2;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
+.link-catalog__card-price svg:hover {
+  opacity: 1;
+  fill: @lg;
+}
+
+.link-catalog__card-price svg:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

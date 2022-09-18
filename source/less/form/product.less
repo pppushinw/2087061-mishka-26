@@ -174,8 +174,12 @@
     height: 52px;
   }
 
-  .filter-form__input input[type="checkbox"]:checked ~ .filter-form__input-control::before {
-    content: url("/img/form/tick.svg");
+  .filter-form__input-control svg {
+    display: none;
+  }
+
+  .filter-form__input input[type="checkbox"]:checked ~ .filter-form__input-control svg {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -183,7 +187,8 @@
     bottom: 0;
     margin: auto;
     width: 32px;
-    height: 22px;
+    fill: #000000;
+    opacity: 1;
   }
 
   .filter-form__input span.color {

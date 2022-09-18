@@ -51,6 +51,10 @@
 .main__item {
   background-color: @lg;
   padding: 24px 30px 31px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 119px;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
 
@@ -69,24 +73,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  &--interior::after {
-    content: url("../img/index/interior.svg");
-    position: absolute;
-    top: 0;
-    right: 10px;
-    width: 40px;
-    height: 62px;
-  }
-
-  &--toy::after {
-    content: url("../img/index/toy.svg");
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 60px;
-  }
 }
 
 @media (min-width: @tablet-width) {

@@ -9,6 +9,8 @@
 
 .reviews__title .reviews__button {
   display: none;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
 }
 
 .reviews p {
@@ -64,6 +66,15 @@
 
   .reviews__button {
     display: none;
+  }
+
+  .reviews__button:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  .reviews__button:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 

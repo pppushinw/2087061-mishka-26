@@ -32,8 +32,12 @@
   margin-right: 25px;
 }
 
-.contact__table tr:first-child td:last-child {
-  border-bottom: 1px solid #62d1ba;
+.contact__table-email {
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+  border-bottom: 1px solid @lg;
+  box-sizing: border-box;
+  height: 32px;
 }
 
 .contact__info .contact__link {
@@ -56,6 +60,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
+.contact__table-email:hover {
+  color: @lg;
+}
+
+.contact__table-email:active {
+  border-bottom: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -88,13 +102,19 @@
     margin: 55px auto 57px;
   }
 
-  .contact__title::after {
-    content: url("../img/index/flag.svg");
+  .contact__link:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  .contact__link:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .contact__title {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     justify-content: space-between;
   }
 }
@@ -104,7 +124,7 @@
     padding: 70px 0 0 175px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 105px;
+    margin-bottom: 104px;
   }
 
   .contact__info {
@@ -115,7 +135,7 @@
 
   .contact__title {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     position: relative;
   }
@@ -125,7 +145,7 @@
     line-height: 57px;
   }
 
-  .contact__title::after {
+  .contact__title svg {
     position: absolute;
     left: -40%;
   }

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   width: 262px;
 }
 
@@ -13,13 +13,16 @@
   background-color: @lg;
 }
 
+.filter-form__title hr.mail {
+  width: 182px;
+}
+
 .filter-form__title span {
   font-weight: @bold;
   font-size: 17px;
   line-height: 16px;
   color: @lg;
   text-transform: uppercase;
-  margin-top: 19px;
 }
 
 .filter-form__list {
@@ -42,9 +45,8 @@ input[type="email"] {
   height: 52px;
   outline: none;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
-  padding-left: 18px;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
   background-color: transparent;
@@ -56,10 +58,10 @@ input[type="email"] {
 
 .filter-form__input svg {
   position: absolute;
-  right: 0;
-  top: 14px;
-  width: 25px;
-  height: 24px;
+  right: 3px;
+  top: 13px;
+  width: 31px;
+  height: 27px;
   opacity: 0.2;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
@@ -114,7 +116,7 @@ input[type="email"] {
 }
 
 .filter-form__input-extra {
-  margin-top: 0;
+  margin-top: -6px;
 }
 
 @media (min-width: @tablet-width) {
@@ -143,10 +145,24 @@ input[type="email"] {
   input[type="tel"],
   input[type="email"] {
     width: 501px;
+    padding-left: 17px;
   }
 
   .filter-form__input textarea {
     width: 501px;
+  }
+
+  .filter-form__input svg {
+    right: 20px;
+  }
+
+  .filter-form--textarea {
+    margin-top: 67px;
+    font-size: 19px;
+  }
+
+  .filter-form__input-extra {
+    margin-top: -1px;
   }
 }
 
@@ -158,7 +174,7 @@ input[type="email"] {
 
   .filter-form__title {
     width: 107px;
-    margin-right: 22px;
+    margin-right: 8px;
   }
 
   .filter-form__input {

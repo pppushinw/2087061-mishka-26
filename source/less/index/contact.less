@@ -2,6 +2,11 @@
   padding: 33px 30px 38px;
 }
 
+.contact__info {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 .contact__title {
   margin-bottom: 26px;
 }
@@ -22,24 +27,32 @@
   justify-content: flex-start;
 }
 
-.contact__table tr td {
+.contact__table td {
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   color: #444444;
 }
 
+.contact__table a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #444444;
+  text-decoration: none;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
 .contact__table tr:first-child {
   margin-bottom: 28px;
 }
 
-.contact__table tr td:first-child {
+.contact__table td:first-child {
   margin-right: 35px;
 }
 
 .contact__table-email {
-  transition-timing-function: ease-out;
-  transition-duration: 0.1s;
   border-bottom: 1px solid @lg;
   box-sizing: border-box;
   height: 32px;
@@ -60,7 +73,6 @@
   font-weight: @bold;
   font-size: 17px;
   line-height: 20px;
-  margin-top: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,20 +80,27 @@
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
   letter-spacing: 1px;
+  max-width: 260px;
+  margin: 45px auto 0 auto;
 }
 
-.contact__table-email:hover {
+.contact__table-email:hover a {
   color: @lg;
 }
 
 .contact__table-email:active {
-  border-bottom: none;
+  border-bottom: 1px solid rgba(99, 209, 187, 0.1);
 }
 
 @media (min-width: @tablet-width) {
   .contact {
     padding: 0;
     margin-top: 62px;
+  }
+
+  .contact__info {
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   .contact__table {
@@ -103,14 +122,18 @@
     margin-right: 20px;
   }
 
-  .contact__table tr td {
+  .contact__table td {
+    font-size: 17px;
+  }
+
+  .contact__table a {
     font-size: 17px;
   }
 
   .contact__link {
     padding: 14px 26px;
     width: 230px;
-    margin: 55px auto 65px;
+    margin: 61px auto 65px;
     letter-spacing: 0;
   }
 
@@ -137,23 +160,26 @@
     margin-top: -15px;
   }
 
-  .contact__table tr td:first-child {
+  .contact__table td:first-child {
     margin-right: 27px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contact {
-    padding: 88px 0 0 175px;
+    padding: 88px 0 0 0;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 49px;
+    max-width: 1150px;
+    margin: 62px auto 49px auto;
   }
 
   .contact__info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: unset;
+    margin: 0 0 0 175px;
   }
 
   .contact__title {
@@ -188,5 +214,9 @@
 
   .contact__link {
     display: none;
+  }
+
+  .contact__table a {
+    font-size: 17px;
   }
 }

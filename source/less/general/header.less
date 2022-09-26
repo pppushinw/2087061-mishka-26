@@ -1,76 +1,129 @@
-.header__logo {
-  text-align: center;
-  padding: 22px 30px 17px;
-
-  &--mobile {
-    max-width: 86px;
-  }
-
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 79px;
 }
 
-@media (min-width: 768px) {
-  .header__logo {
-    padding: 0;
+.main-header__logo {
+  padding: 22px 117px;
+}
 
-    &--mobile {
-      display: none;
-    }
+.main-nav__wrapper {
+  position: absolute;
+  left: 0;
+  top: 79px;
+  width: 100%;
+  z-index: 1;
+  background-color: #ffffff;
+}
 
-    &--tablet {
-      display: block;
-      max-width: 113px;
-      margin-top: 7px;
-    }
+.main-nav__toggle {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 20px;
+  height: 14px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.main-nav__toggle span {
+  display: block;
+  background-color: #000000;
+  width: 20px;
+  height: 2px;
+}
+
+.main-nav__toggle span:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.main-nav__bottom-delivery {
+  display: none;
+}
+
+.main-header__logo-tablet,
+.main-header__logo-desktop {
+  display: none;
+}
+
+.main-header__logo-link svg {
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
+.main-header__logo-link:hover svg {
+  opacity: 0.6;
+}
+
+.main-header__logo-link:active svg {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    height: 88px;
   }
 
-  .header {
+  .main-nav__wrapper {
+    display: flex;
+    top: 0;
+    flex-direction: column-reverse;
+  }
+
+  .main-nav__bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 -50px;
-    padding: 0 50px;
-    position: relative;
+    border-top: 1px solid #ececec;
+    background-color: #f9f9f9;
+  }
+
+  .main-nav__bottom-secondary {
+    background-color: #f1f1f1;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-header__logo-tablet {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 50px;
+  }
+
+  .main-header__logo-mobile {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .header__logo {
+  .main-header {
+    position: relative;
+    margin: 0 -50px;
+  }
+
+  .main-header__logo-tablet {
+    display: none;
+  }
+
+  .main-header__logo-desktop {
+    display: block;
     position: absolute;
+    top: 8px;
     left: 0;
     right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 2;
+  }
 
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-      max-width: 150px;
-      margin: 9px auto 0;
-    }
-
-    &--desktop svg {
-      transition-timing-function: ease-out;
-      transition-duration: 0.1s;
-    }
-
-    &--desktop svg:hover {
-      opacity: 0.6;
-    }
-
-    &--desktop svg:active {
-      opacity: 0.3;
-    }
+  .main-nav__bottom {
+    position: relative;
   }
 }

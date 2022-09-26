@@ -56,7 +56,7 @@ const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(gulp.dest('build/img'))
 }
- 
+
 // WebP
 
 const createWebp = () => {

@@ -17,7 +17,7 @@
   width: 182px;
 }
 
-.filter-form__title span {
+.filter-form__title label {
   font-weight: @bold;
   font-size: 17px;
   line-height: 16px;
@@ -36,9 +36,7 @@
 }
 
 
-.filter-form__input input[type="text"],
-input[type="tel"],
-input[type="email"] {
+.filter-form__input .product__input-string {
   border: none;
   border-bottom: 2px solid #000000;
   width: 260px;
@@ -50,6 +48,7 @@ input[type="email"] {
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
   background-color: transparent;
+  padding-right: 60px;
 }
 
 .filter-form__input {
@@ -77,8 +76,9 @@ input[type="email"] {
   fill: @lg;
 }
 
-.filter-form__input input::placeholder {
+.product__input-string::placeholder {
   color: rgba(0, 0, 0, 0.3);
+  max-width: 450px;
 }
 
 .filter-form__input textarea {
@@ -89,7 +89,7 @@ input[type="email"] {
   outline: none;
   padding: 17px 0 0 17px;
   font-weight: 400;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 18px;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
@@ -135,21 +135,23 @@ input[type="email"] {
   }
 
   .filter-form__title {
-    max-width: 107px;
-    width: 100%;
+    width: 107px;
     margin-bottom: 0;
     margin-right: 62px;
   }
 
-  .filter-form__input input[type="text"],
-  input[type="tel"],
-  input[type="email"] {
+  .filter-form__input .product__input-string {
     width: 501px;
     padding-left: 17px;
   }
 
+  .filter-form__input:not(:last-child) {
+    margin-bottom: 21px;
+  }
+
   .filter-form__input textarea {
     width: 501px;
+    font-size: 19px;
   }
 
   .filter-form__input svg {
@@ -159,6 +161,10 @@ input[type="email"] {
   .filter-form--textarea {
     margin-top: 67px;
     font-size: 19px;
+  }
+
+  .filter-form--textarea .filter-form__title {
+    margin-right: 60px;
   }
 
   .filter-form__input-extra {
@@ -181,13 +187,15 @@ input[type="email"] {
     flex-basis: 33%;
   }
 
-  .filter-form__input input[type="text"],
-  input[type="tel"],
-  input[type="email"] {
+  .filter-form__input .product__input-string {
     width: 698px;
   }
 
   .filter-form__input textarea {
     width: 698px;
+  }
+
+  .filter-form--textarea .filter-form__title {
+    margin-right: 8px;
   }
 }

@@ -1,4 +1,6 @@
 .zigzag-fill {
+  margin-left: -50px;
+
   &--desktop {
     display: none;
   }
@@ -9,6 +11,9 @@
 }
 
 .zigzag-line {
+  max-width: 320px;
+  margin: 0 auto;
+
   &--desktop,
   &--tablet {
     display: none;
@@ -17,15 +22,25 @@
 
 @media (min-width: @tablet-width) {
   .zigzag-fill {
-    margin-top: -12px;
-    margin-left: -50px;
-
     &--tablet {
       display: block;
+      max-width: 768px;
+      margin: 0 auto 0;
     }
   }
 
+  .zigzag-fill__main {
+    margin-left: -50px;
+  }
+
+  .zigzag-fill__main .zigzag-fill--tablet {
+    margin-top: -10px;
+  }
+
   .zigzag-line {
+    max-width: 768px;
+    margin: 0 auto;
+
     &--desktop,
     &--mobile {
       display: none;
@@ -40,7 +55,7 @@
 
 @media (min-width: @desktop-width) {
   .zigzag-fill {
-    margin-top: -17px;
+    margin-top: -21px;
     margin-left: -50px;
 
     &--tablet {
@@ -49,10 +64,18 @@
 
     &--desktop {
       display: block;
+      max-width: 1150px;
     }
   }
 
+  .zigzag-fill__main .zigzag-fill--desktop {
+    margin-top: -17px;
+  }
+
   .zigzag-line {
+    max-width: 1150px;
+    margin: 0 auto;
+
     &--tablet,
     &--mobile {
       display: none;

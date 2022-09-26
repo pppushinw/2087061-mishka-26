@@ -22,14 +22,15 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 36px;
+  outline: 2px solid #ececec;
 }
 
 .reviews-user__arrow {
   padding: 13px 40px;
   border: none;
-  outline: 2px solid #ececec;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
+  background-color: transparent;
 }
 
 .reviews-user__arrow:hover {
@@ -40,12 +41,12 @@
   opacity: 0.3;
 }
 
-.reviews-user__arrow-left {
-  padding-left: 38px;
+.reviews-user__arrow:focus-visible svg {
+  fill: @lg;
 }
 
-.reviews-user__arrow-right {
-  padding-right: 42px;
+.reviews-user__arrow-left {
+  outline: 2px solid #ececec;
 }
 
 @media (min-width: @tablet-width) {
@@ -87,6 +88,7 @@
   .reviews-user__arrows {
     margin-bottom: 0;
     margin-top: 10px;
+    outline: none;
   }
 }
 

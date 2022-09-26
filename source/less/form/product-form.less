@@ -8,6 +8,21 @@
 
   .filter-form__title {
     margin-bottom: 29px;
+    position: relative;
+  }
+
+  .filter-form__title-label::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 202px;
+    height: 1px;
+    background-color: @lg;
+  }
+
+  .filter-form__title-label--email::after {
+    width: 184px;
   }
 
   .filter-form--grey .filter-form:first-child {
@@ -37,12 +52,16 @@
 
 @media (min-width: @tablet-width) {
   .product-form__user {
-    margin-top: 22px;
+    margin-top: 32px;
   }
 
   .product-form__user .filter-form__title {
     margin-top: 19px;
-    margin-right: 60px;
+    margin-right: 116px;
+  }
+
+  .product-form__user .filter-form__title-label::after {
+    display: none;
   }
 
   .product-form__user .form__filter {
@@ -65,12 +84,17 @@
 
   .product-form__user .filter-form--grey .filter-form__title {
     margin-top: 16px;
+    margin-right: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .product-form__user {
     margin-top: 25px;
+  }
+
+  .product-form__user .filter-form--grey .filter-form__title {
+    margin-right: 8px;
   }
 
   .product-form__user .filter-form__title {

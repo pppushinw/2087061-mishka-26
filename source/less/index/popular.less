@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .popular__title span {
@@ -24,7 +26,7 @@
   border-bottom: 1px solid #ececec;
 }
 
-.popular__table tr td {
+.popular__table td {
   font-weight: 400;
   font-size: 15px;
   line-height: 40px;
@@ -70,6 +72,8 @@
     flex-direction: column;
     padding: 40px 0 52px 0;
     position: relative;
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   .popular__title {
@@ -111,6 +115,8 @@
 @media (min-width: @desktop-width) {
   .popular {
     padding: 114px 32px 73px;
+    max-width: 1150px;
+    margin: 0 auto;
   }
 
   .popular__title {

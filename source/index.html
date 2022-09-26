@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.min.min.css">
     <title>Главная</title>
     <link rel="icon" type="image/ico" href="favicon.ico" sizes="32x32">
     <link rel="icon" href="img/favicon/favicon16.svg" type="image/svg+xml">
@@ -370,24 +370,31 @@
     <div class="modal__container modal--active">
       <div class="modal">
         <form action="https://echo.htmlacademy.ru/">
-          <div class="modal__title">Добавить в корзину</div>
-          <!-- /.modal__title -->
-          <p>Выберите размер:</p>
-          <div class="modal__size">
-            <label class="modal__size-button">
-              <input type="radio" name="product-size" value="s" checked>
-              <span>s</span>
-            </label>
-            <label class="modal__size-button">
-              <input type="radio" name="product-size" value="m">
-              <span class="modal__size-button">m</span>
-            </label>
-            <label class="modal__size-button">
-              <input type="radio" name="product-size" value="l">
-              <span class="modal__size-button">l</span>
-            </label>
+          <div class="modal__title">
+            <span>Добавить в корзину</span>
+            <p>Выберите размер:</p>
           </div>
-          <!-- /.modal__size -->
+          <!-- /.modal__title -->
+          <fieldset class="modal__form modal-form">
+            <div class="modal-form__list">
+              <label class="modal-form__input">
+                <input type="radio" name="product-size" value="s" checked>
+                <span class="modal-form__button-radio modal-form__button-radio--first"></span>
+              </label>
+              <!-- /.filter-form__input -->
+              <label class="modal-form__input">
+                <input type="radio" name="product-size" value="m">
+                <span class="modal-form__button-radio modal-form__button-radio--second"></span>
+              </label>
+              <!-- /.filter-form__input -->
+              <label class="modal-form__input">
+                <input type="radio" name="product-size" value="l">
+                <span class="modal-form__button-radio modal-form__button-radio--third"></span>
+              </label>
+              <!-- /.filter-form__input -->
+            </div>
+            <!-- /.filter-form__list -->
+          </fieldset>
           <button type="submit" class="modal__button">Добавить</button>
         </form>
       </div>

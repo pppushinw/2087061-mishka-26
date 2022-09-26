@@ -27,6 +27,12 @@
 }
 
 .modal__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__title span {
   text-align: center;
   text-transform: uppercase;
   font-size: 25px;
@@ -34,93 +40,45 @@
   font-weight: 700;
 }
 
-.modal p {
+.modal__title p {
   font-weight: 400;
   font-size: 15px;
   line-height: 30px;
   color: #444444;
-  margin-bottom: 21px;
   text-align: center;
-}
-
-.modal__size {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-  max-width: 260px;
-}
-
-.modal__size button {
-  border: 2px solid rgba(68, 68, 68, 0.1);
-  padding: 16px 33px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
-  color: #444444;
-  outline: none;
+  margin-top: 15px;
+  margin-bottom: 22px;
 }
 
 .modal__button {
-  background-color: @lg;
-  color: #ffffff;
-  border: none;
-  outline: none;
-  padding: 18px 68px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
-  text-transform: uppercase;
-  width: 100%;
-}
-
-.modal__size input {
-  appearance: none;
-}
-
-.modal__size-button {
-  position: relative;
-}
-
-.modal__size-button span {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 2px solid rgba(68, 68, 68, 0.1);
-  width: 82px;
+  width: 260px;
   height: 52px;
+  background-color: @lg;
+  border: none;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
-  color: #444444;
-  outline: none;
+  color: #ffffff;
+  margin: 31px auto 0;
+  align-self: center;
   text-transform: uppercase;
-  transition-timing-function: ease-out;
-  transition-duration: 0.1s;
 }
 
-.modal__size-button span:hover {
-  border: 2px solid rgba(68, 68, 68, 0.3);
-}
-
-.modal__size-button input[type="radio"]:checked ~ span {
-  border: 2px solid @lg;
-}
-
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .modal {
-    max-width: 566px;
     min-width: 566px;
-    padding: 37px 102px 46px;
+    height: 336px;
+    padding-top: 37px;
   }
 
-  .modal__size-button {
-    padding: 16px 48px;
-  }
-
-  .modal__title {
+  .modal__title span {
     font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__title p {
+    font-size: 17px;
+    margin-top: 13px;
+    margin-bottom: 34px;
   }
 }

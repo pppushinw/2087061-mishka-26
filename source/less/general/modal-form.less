@@ -1,0 +1,62 @@
+.modal form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-form {
+  border: none;
+}
+
+.modal-form__input input {
+  appearance: none;
+  display: none;
+}
+
+.modal-form__list {
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.modal-form__button-radio {
+  width: 82px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+}
+
+.modal-form__button-input input[type="radio"]:checked ~ .modal-form__button-radio {
+  background-color: 2px solid @lg;
+}
+
+.modal__button {
+  width: 260px;
+  height: 52px;
+  background-color: @lg;
+  border: none;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: #ffffff;
+  margin: 31px auto 0;
+  align-self: center;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-form__list {
+    max-width: 350px;
+  }
+
+  .modal-form__button-radio {
+    width: 112px;
+    height: 52px;
+  }
+
+  .modal__button {
+    width: 350px;
+  }
+}

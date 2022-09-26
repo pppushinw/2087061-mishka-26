@@ -1,9 +1,11 @@
 .popular {
-  padding: 31px 30px 36px;
+  padding: 31px 30px 25px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .popular__title span {
@@ -15,7 +17,7 @@
 }
 
 .popular__table {
-  margin: 28px 0;
+  margin: 16px 0 29px;
   width: 260px;
   border-collapse: collapse;
 }
@@ -24,10 +26,10 @@
   border-bottom: 1px solid #ececec;
 }
 
-.popular__table tr td {
+.popular__table td {
   font-weight: 400;
   font-size: 15px;
-  line-height: 32px;
+  line-height: 40px;
   color: #444444;
 }
 
@@ -37,14 +39,14 @@
   line-height: 24px;
   color: #444444;
   align-self: center;
-  margin: 25px 0;
+  margin: 19px 0 26px;
 }
 
 .popular__price button {
   background-color: #ffffff;
   border: 2px solid #444444;
   color: #444444;
-  padding: 16px 80px;
+  padding: 14px 80px;
   font-weight: @bold;
   font-size: 18px;
   line-height: 20px;
@@ -54,23 +56,15 @@
   transition-duration: 0.1s;
 }
 
-.popular__price button:hover {
-  color: #ffffff;
-  background-color: #444444;
-}
-
-.popular__price button:active {
-  color: rgba(255, 255, 255, 0.3);
-}
-
 
 @media (min-width: @tablet-width) {
   .popular {
     display: flex;
     flex-direction: column;
     padding: 40px 0 52px 0;
-    margin-top: 54px;
     position: relative;
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   .popular__title {
@@ -79,23 +73,41 @@
     align-items: center;
     max-width: 655px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
   }
 
   .popular__title span {
     max-width: 100px;
     text-align: center;
     line-height: 17px;
+    margin-top: -8px;
   }
 
   .popular__table {
-    margin: 48px 0 50px;
+    margin: 37px 0 57px;
+    width: 291px;
+  }
+
+  .popular__table td:first-child {
+    width: 97px;
+  }
+
+  .popular__price span.price {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 33px;
+  }
+
+  .popular__price button {
+    padding: 14px 96px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .popular {
-    padding: 45px 32px 96px;
+    padding: 114px 32px 73px;
+    max-width: 1150px;
+    margin: 0 auto;
   }
 
   .popular__title {
@@ -116,7 +128,7 @@
   }
 
   .popular__table {
-    margin-top: 60px;
+    margin-top: 48px;
     margin-bottom: 0;
   }
 }

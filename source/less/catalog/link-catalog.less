@@ -4,21 +4,30 @@
 
 .link-catalog__card {
   background-color: #ffffff;
-  padding: 25px 30px;
+  padding: 34px 27px 25px;
   border: 1px solid #ececec;
   margin-top: -6px;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.link-catalog__title a {
+  text-decoration: none;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
 }
 
 .link-catalog__card-name {
-  margin-bottom: 5px;
   font-weight: @bold;
   font-size: 17px;
   line-height: 24px;
   color: #000000;
   transition-timing-function: ease-out;
   transition-duration: 0.1s;
+  margin: 0 0 5px 0;
 }
 
 .link-catalog__card span {
@@ -57,19 +66,19 @@
   display: none;
 }
 
-.link-catalog:hover .link-catalog__card {
+.link-catalog:hover ~ .link-catalog__card {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.link-catalog:active .link-catalog__card {
+.link-catalog:active ~ .link-catalog__card {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.link-catalog:hover .link-catalog__card-name {
+.link-catalog__card-name:hover {
   opacity: 0.6;
 }
 
-.link-catalog:active .link-catalog__card-name {
+.link-catalog__card-name:active {
   opacity: 0.3;
 }
 
@@ -86,6 +95,14 @@
 
 .link-catalog__card-price svg:active {
   opacity: 0.3;
+}
+
+.link-catalog__card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link-catalog__card:active {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: @tablet-width) {
@@ -108,13 +125,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px 39px 25px 34px;
+    padding: 27px 39px 25px 32px;
     width: 334px;
-    height: 334px;
+    min-height: 334px;
   }
 
   .link-catalog__card-name {
     font-size: 20px;
+    margin-bottom: 7px;
   }
 
   .link-catalog__card span {
@@ -133,8 +151,13 @@
 @media (min-width: @desktop-width) {
   .link-catalog__card {
     width: 316px;
-    height: 197px;
+    min-height: 199px;
     margin-top: -1px;
+    padding: 28px 30px 25px 27px;
+  }
+
+  .link-catalog__card-name {
+    margin-bottom: 5px;
   }
 
   .link-catalog__img-tablet {

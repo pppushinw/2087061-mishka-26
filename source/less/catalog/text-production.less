@@ -2,6 +2,11 @@
   position: relative;
 }
 
+.text-production__video img {
+  display: block;
+  margin-left: -1px;
+}
+
 .text-production__video button {
   position: absolute;
   top: 0;
@@ -26,42 +31,82 @@
   display: none;
 }
 
+.text-production__video-button svg {
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
+.text-production__video-button:hover svg {
+  scale: 1.2;
+}
+
+.text-production__video-button:active svg {
+  scale: 0.8;
+  opacity: 0.3;
+}
+
+.text-production__video-button:focus-visible svg {
+  stroke: @lg;
+}
+
+.text-production__info .order {
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.text-production__info .order:hover {
+  color: #ffffff;
+  background-color: #444444;
+}
+
+.text-production__info .order:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.text-production__info {
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+  padding-bottom: 33px;
+}
+
+.text-production:hover .text-production__info {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-production:active .text-production__info {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
 @media (min-width: @tablet-width) {
-  .text-production__video-mobile {
-    display: none;
-  }
-
-  .text-production__video-tablet {
-    display: block;
-  }
-
   .text-production__info {
     border: 1px solid #eeeeee;
+    padding-bottom: 0;
   }
 
   .text-production__title {
-    margin: 39px 42px;
+    margin: 39px 42px 0;
     display: flex;
   }
 
-  .text-production__title img {
-    margin-right: 33px;
+  .text-production__title svg {
+    margin-right: 21px;
   }
 
-  .text-production__title h3 {
+  .text-production__title h2 {
+    font-weight: 700;
     font-size: 20px;
+    line-height: 24px;
+  }
+
+  .text-production__video {
+    height: 455px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .text-production__video-tablet {
-    display: none;
-  }
-
-  .text-production__video-desktop {
-    display: block;
-  }
-
   .text-production {
     display: flex;
     align-items: center;
@@ -69,11 +114,11 @@
   }
 
   .text-production__info {
-    padding: 43px 36px 60px 79px;
+    padding: 48px 36px 58px 79px;
   }
 
   .text-production__info .order {
-    margin: 48px 0 0;
+    margin: 53px 0 0;
   }
 
   .text-production__title {
@@ -81,9 +126,15 @@
     display: flex;
     flex-direction: column;
     max-width: 200px;
+    margin-left: -1px;
   }
 
-  .text-production__title img {
+  .text-production__title svg {
     margin-bottom: 27px;
+  }
+
+  .text-production__video button {
+    top: 3px;
+    left: 2px;
   }
 }

@@ -1,14 +1,23 @@
 .contact {
-  padding: 38px 30px;
-  border-top: 1px solid #ececec;
+  padding: 33px 30px 38px;
+}
+
+.contact__info {
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .contact__title {
-  margin-bottom: 28px;
+  margin-bottom: 26px;
+}
+
+.contact__title svg {
+  display: none;
 }
 
 .contact__table {
-  margin-bottom: 63px;
+  margin-bottom: 60px;
+  margin-left: -3px;
 }
 
 .contact__table tr {
@@ -18,23 +27,35 @@
   justify-content: flex-start;
 }
 
-.contact__table tr td {
+.contact__table td {
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
   color: #444444;
 }
 
+.contact__table a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: #444444;
+  text-decoration: none;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+}
+
 .contact__table tr:first-child {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
-.contact__table tr td:first-child {
-  margin-right: 25px;
+.contact__table td:first-child {
+  margin-right: 35px;
 }
 
-.contact__table tr:first-child td:last-child {
-  border-bottom: 1px solid #62d1ba;
+.contact__table-email {
+  border-bottom: 1px solid @lg;
+  box-sizing: border-box;
+  height: 32px;
 }
 
 .contact__info .contact__link {
@@ -43,7 +64,7 @@
 
 .contact__link {
   background-color: #ffffff;
-  padding: 16px 38px;
+  padding: 14px 38px;
   border: 2px solid #444444;
   text-align: center;
   color: #444444;
@@ -52,73 +73,121 @@
   font-weight: @bold;
   font-size: 17px;
   line-height: 20px;
-  margin-top: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
+  letter-spacing: 1px;
+  max-width: 260px;
+  margin: 45px auto 0 auto;
 }
 
-@media (min-width: 768px) {
+.contact__table-email:hover a {
+  color: @lg;
+}
+
+.contact__table-email:active {
+  border-bottom: 1px solid rgba(99, 209, 187, 0.1);
+}
+
+@media (min-width: @tablet-width) {
   .contact {
-    padding: 22px 0;
-    margin-top: 68px;
+    padding: 0;
+    margin-top: 62px;
+  }
+
+  .contact__info {
+    max-width: 768px;
+    margin: 0 auto;
   }
 
   .contact__table {
-    margin-bottom: 49px;
+    margin-bottom: 46px;
     width: 100%;
   }
 
   .contact__table tbody {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .contact__table tr {
     width: 100%;
+    max-width: 314px;
   }
 
-  .contact__table tr td {
+  .contact__table tr:first-child {
+    margin-right: 20px;
+  }
+
+  .contact__table td {
+    font-size: 17px;
+  }
+
+  .contact__table a {
     font-size: 17px;
   }
 
   .contact__link {
     padding: 14px 26px;
     width: 230px;
-    margin: 55px auto 57px;
+    margin: 61px auto 65px;
+    letter-spacing: 0;
   }
 
-  .contact__title::after {
-    content: url("../img/index/flag.svg");
+  .contact__link:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  .contact__link:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .contact__title {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    max-width: 665px;
+    margin-bottom: 38px;
+  }
+
+  .contact__title svg {
+    display: block;
+    margin-top: -15px;
+  }
+
+  .contact__table td:first-child {
+    margin-right: 27px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contact {
-    padding: 70px 0 0 173px;
+    padding: 88px 0 0 0;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 105px;
+    max-width: 1150px;
+    margin: 62px auto 49px auto;
   }
 
   .contact__info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: unset;
+    margin: 0 0 0 175px;
   }
 
   .contact__title {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     position: relative;
+    margin-bottom: 30px;
   }
 
   .contact__title h2 {
@@ -126,9 +195,9 @@
     line-height: 57px;
   }
 
-  .contact__title::after {
+  .contact__title svg {
     position: absolute;
-    left: -40%;
+    left: -41%;
   }
 
   .contact__table tbody {
@@ -139,9 +208,15 @@
 
   .contact__info .contact__link {
     display: block;
+    margin-left: 0;
+    margin-top: 35px;
   }
 
   .contact__link {
     display: none;
+  }
+
+  .contact__table a {
+    font-size: 17px;
   }
 }

@@ -1,27 +1,19 @@
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/opensans.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/opensansbold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body,
+span,
+button,
+textarea,
+input {
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
 }
 
 .container {
@@ -42,14 +34,17 @@ body {
   overflow: hidden;
 }
 
-button {
-  cursor: pointer;
-  background: #ffffff;
-  border: 2px solid #444444;
-}
-
 @media (min-width: @tablet-width) {
   .container {
     padding: 0 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    padding: 0 50px;
+    margin: 0 auto;
+    max-width: 1150px;
   }
 }

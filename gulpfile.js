@@ -11,7 +11,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import {deleteAsync} from 'del';
+import del from 'del';
 // Styles
 export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
@@ -86,7 +86,7 @@ const copy = (done) => {
 }
 // Clean
 const clean = () => {
-  return deleteAsync('build');
+  return del('build');
 }
 // Server
 const server = (done) => {

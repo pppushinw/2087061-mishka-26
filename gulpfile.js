@@ -3,6 +3,7 @@ import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
 import csso from 'postcss-csso';
+import csso from 'postcss-csso';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import rename from 'gulp-rename';
@@ -19,6 +20,7 @@ export const styles = () => {
     .pipe(less())
     .pipe(postcss([
       autoprefixer(),
+      csso(),
       csso()
     ]))
     .pipe(rename('style.min.css'))
@@ -106,7 +108,8 @@ const reload = (done) => {
 // Watcher
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  // gulp.watch('source/*.html').on('change', browser.reload);
+  // gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
@@ -130,6 +133,10 @@ export default gulp.series(
   copy,
   copyImages,
   gulp.parallel(
+    clean,
+  copy,
+  copyImages,
+  gulp.parallel(
     styles,
     html,
     scripts,
@@ -138,6 +145,15 @@ export default gulp.series(
     createWebp
   ),
   gulp.series(
+   
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
     server,
+   
     watcher
-  ));
+  )  ));

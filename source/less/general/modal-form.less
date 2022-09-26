@@ -18,33 +18,41 @@
   margin: 0 auto;
 }
 
-.modal-form__button-radio {
-  width: 82px;
-  height: 52px;
+.modal-form__button-radio::before {
+  content: "";
+  padding: 12px 33px;
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid rgba(68, 68, 68, 0.1);
+  transition-timing-function: ease-out;
+  transition-duration: 0.1s;
 }
 
-.modal-form__button-input input[type="radio"]:checked ~ .modal-form__button-radio {
-  background-color: 2px solid @lg;
+.modal-form__button-radio--first::before {
+  content: "s";
 }
 
-.modal__button {
-  width: 260px;
-  height: 52px;
-  background-color: @lg;
-  border: none;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
-  color: #ffffff;
-  margin: 31px auto 0;
-  align-self: center;
+.modal-form__button-radio--second::before {
+  content: "m";
 }
+
+.modal-form__button-radio--third::before {
+  content: "l";
+}
+
+.modal-form__input:hover .modal-form__button-radio::before {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+}
+
+.modal-form__input:active .modal-form__button-radio::before {
+  border: 2px solid @lg;
+}
+
+.modal-form__input input[type="radio"]:checked ~ .modal-form__button-radio::before {
+  border: 2px solid @lg;
 
 @media (min-width: @tablet-width) {
   .modal-form__list {
@@ -58,5 +66,9 @@
 
   .modal__button {
     width: 350px;
+  }
+  
+  .modal-form__button-radio::before {
+    padding: 13px 49px;
   }
 }

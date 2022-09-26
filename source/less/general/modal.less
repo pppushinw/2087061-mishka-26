@@ -26,6 +26,12 @@
   z-index: 3;
 }
 
+.modal__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .modal__title span {
   text-align: center;
   text-transform: uppercase;
@@ -44,8 +50,35 @@
   margin-bottom: 22px;
 }
 
+.modal__button {
+  width: 260px;
+  height: 52px;
+  background-color: @lg;
+  border: none;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: #ffffff;
+  margin: 31px auto 0;
+  align-self: center;
+  text-transform: uppercase;
+}
+
 @media (min-width: @tablet-width) {
   .modal {
     min-width: 566px;
+    height: 336px;
+    padding-top: 37px;
+  }
+
+  .modal__title span {
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__title p {
+    font-size: 17px;
+    margin-top: 13px;
+    margin-bottom: 34px;
   }
 }
